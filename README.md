@@ -195,6 +195,33 @@ SleekButtonStyle.light(
 )
 ```
 
+#### Colors
+
+<img height="54" src="https://github.com/aloisdeniel/sleek_button/raw/master/images/style_colors.png">
+
+If you give a `color`, all variants (dark, light, invert) will be calculated with the help of the [derived_colors](https://github.com/aloisdeniel/derived_colors) package.
+
+```dart
+SleekButtonStyle.flat(
+    color: const Color(0xFF)
+    context: context,
+)
+```
+
+```dart
+ SleekButtonStyle.light(
+    color: const Color(0xFFFFC369),
+    context: context,
+)
+```
+
+```dart
+SleekButtonStyle.outlined(
+    color: const Color(0xFF323232),
+    context: context,
+)
+```
+
 ### Theme
 
 You can customize the default appearance of the button by adding a `SleekButtonTheme` in the tree. If a `Theme` is in the tree,

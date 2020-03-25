@@ -292,6 +292,40 @@ class Readme extends StatelessWidget {
                 ),
               ],
             ),
+            ButtonWrap(
+              children: <Widget>[
+                SleekButton(
+                  onTap: () {
+                    print('tapped!');
+                  },
+                  style: SleekButtonStyle.flat(
+                    color: const Color(0xFFEE394E),
+                    context: context,
+                  ),
+                  child: const Text('Danger'),
+                ),
+                SleekButton(
+                  onTap: () {
+                    print('tapped!');
+                  },
+                  style: SleekButtonStyle.light(
+                    color: const Color(0xFFFFC369),
+                    context: context,
+                  ),
+                  child: const Text('Warning'),
+                ),
+                SleekButton(
+                  onTap: () {
+                    print('tapped!');
+                  },
+                  style: SleekButtonStyle.outlined(
+                    color: const Color(0xFF323232),
+                    context: context,
+                  ),
+                  child: const Text('Dark'),
+                ),
+              ],
+            ),
           ],
         ),
       ),
