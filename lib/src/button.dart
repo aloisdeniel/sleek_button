@@ -27,8 +27,7 @@ class SleekButton extends StatefulWidget {
     this.onTap,
     this.autofocus = false,
     this.focusNode,
-  })  : assert(style != null),
-        assert(autofocus != null),
+  })  : assert(autofocus != null),
         super(key: key);
 
   @override
@@ -42,8 +41,10 @@ class _SleekButtonState extends State<SleekButton> {
 
   @override
   Widget build(BuildContext context) {
+    final style = widget.style ?? SleekButtonStyle.flat(context: context);
+
     bool isDisabled = widget.onTap == null;
-    var padding = widget.style.padding?.value(
+    var padding = style.padding?.value(
       isActive: isActive,
       isDisabled: isDisabled,
       isHover: isHover,
@@ -75,8 +76,8 @@ class _SleekButtonState extends State<SleekButton> {
             onTap: widget.onTap,
             behavior: HitTestBehavior.opaque,
             child: AnimatedOpacity(
-              duration: widget.style.transitionDuration,
-              opacity: widget.style.opacity?.value(
+              duration: style.transitionDuration,
+              opacity: style.opacity?.value(
                     isActive: isActive,
                     isDisabled: isDisabled,
                     isHover: isHover,
@@ -84,8 +85,8 @@ class _SleekButtonState extends State<SleekButton> {
                   ) ??
                   1.0,
               child: AnimatedContainer(
-                duration: widget.style.transitionDuration,
-                decoration: widget.style.decoration?.value(
+                duration: style.transitionDuration,
+                decoration: style.decoration?.value(
                   isActive: isActive,
                   isDisabled: isDisabled,
                   isHover: isHover,
@@ -94,7 +95,7 @@ class _SleekButtonState extends State<SleekButton> {
                 padding: padding,
                 child: AnimatedDefaultTextStyle(
                   child: IconTheme(
-                    data: widget.style.iconTheme?.value(
+                    data: style.iconTheme?.value(
                       isActive: isActive,
                       isDisabled: isDisabled,
                       isHover: isHover,
@@ -102,13 +103,13 @@ class _SleekButtonState extends State<SleekButton> {
                     ),
                     child: widget.child,
                   ),
-                  style: widget.style.textStyle?.value(
+                  style: style.textStyle?.value(
                     isActive: isActive,
                     isDisabled: isDisabled,
                     isHover: isHover,
                     isFocused: isFocused,
                   ),
-                  duration: widget.style.transitionDuration,
+                  duration: style.transitionDuration,
                 ),
               ),
             ),

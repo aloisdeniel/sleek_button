@@ -1,12 +1,14 @@
+import 'package:example/readme.dart';
 import 'package:example/swatches.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:sleek_button/sleek_button.dart';
 
 class HomePage extends StatelessWidget {
+  final swatch = sleek;
+
   @override
   Widget build(BuildContext context) {
-    final swatch = bulma;
     final colors = [
       swatch.primary,
       swatch.link,
@@ -124,7 +126,7 @@ class HomePage extends StatelessWidget {
                     color: color,
                     context: context,
                   ),
-                  child: Text('Outlined rounded'),
+                  child: const Text('Outlined rounded'),
                 ),
               ),
               SectionHeader('Icons'),
@@ -139,9 +141,9 @@ class HomePage extends StatelessWidget {
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
-                        Icon(Icons.check),
-                        SizedBox(width: 6),
-                        Text('Save'),
+                        const Icon(Icons.check),
+                        const SizedBox(width: 6),
+                        const Text('Save'),
                       ],
                     ),
                   ),
@@ -154,9 +156,9 @@ class HomePage extends StatelessWidget {
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
-                        Text('Delete'),
-                        SizedBox(width: 6),
-                        Icon(Icons.close),
+                        const Text('Delete'),
+                        const SizedBox(width: 6),
+                        const Icon(Icons.close),
                       ],
                     ),
                   ),
@@ -167,7 +169,17 @@ class HomePage extends StatelessWidget {
                       size: SleekButtonSize.medium,
                       context: context,
                     ),
-                    child: Icon(Icons.format_bold),
+                    child: const Icon(Icons.format_bold),
+                  ),
+                  SleekButton(
+                    onTap: () {},
+                    style: SleekButtonStyle.flat(
+                      color: swatch.light,
+                      rounded: true,
+                      size: SleekButtonSize.medium,
+                      context: context,
+                    ),
+                    child: const Icon(Icons.format_bold),
                   ),
                   SleekButton(
                     onTap: () {},
@@ -175,7 +187,7 @@ class HomePage extends StatelessWidget {
                       color: swatch.light,
                       context: context,
                     ),
-                    child: Icon(Icons.format_bold),
+                    child: const Icon(Icons.format_bold),
                   ),
                   SleekButton(
                     onTap: () {},
@@ -184,7 +196,7 @@ class HomePage extends StatelessWidget {
                       size: SleekButtonSize.small,
                       context: context,
                     ),
-                    child: Icon(Icons.format_bold),
+                    child: const Icon(Icons.format_bold),
                   ),
                   SleekButton(
                     onTap: () {},
@@ -197,47 +209,7 @@ class HomePage extends StatelessWidget {
                   ),
                 ],
               ),
-              SectionHeader('Sizes'),
-              ButtonWrap(
-                children: <Widget>[
-                  SleekButton(
-                    onTap: () {},
-                    style: SleekButtonStyle.flat(
-                      color: swatch.primary,
-                      size: SleekButtonSize.small,
-                      context: context,
-                    ),
-                    child: Text('Example'),
-                  ),
-                  SleekButton(
-                    onTap: () {},
-                    style: SleekButtonStyle.flat(
-                      color: swatch.primary,
-                      size: SleekButtonSize.normal,
-                      context: context,
-                    ),
-                    child: Text('Example'),
-                  ),
-                  SleekButton(
-                    onTap: () {},
-                    style: SleekButtonStyle.flat(
-                      color: swatch.primary,
-                      size: SleekButtonSize.medium,
-                      context: context,
-                    ),
-                    child: Text('Example'),
-                  ),
-                  SleekButton(
-                    onTap: () {},
-                    style: SleekButtonStyle.flat(
-                      color: swatch.primary,
-                      size: SleekButtonSize.big,
-                      context: context,
-                    ),
-                    child: Text('Example'),
-                  ),
-                ],
-              )
+              Readme(swatch),
             ],
           ),
         ),
@@ -310,7 +282,7 @@ class SectionHeader extends StatelessWidget {
           Text(
             "#",
             style: Theme.of(context).textTheme.headline5.copyWith(
-                  color: const Color(0xFF3273dc),
+                  color: sleek.link,
                   fontWeight: FontWeight.bold,
                 ),
           ),

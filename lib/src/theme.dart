@@ -1,21 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-class SleekButtonThemeData {
-  final TextStyle textStyle;
-  final IconThemeData iconTheme;
-  final double cornerRadius;
-  final double padding;
-  final Color fill;
-  final double borderWidth;
+part 'theme.freezed.dart';
 
-  const SleekButtonThemeData({
-    @required this.padding,
-    @required this.textStyle,
-    @required this.cornerRadius,
-    @required this.iconTheme,
-    @required this.fill,
-    @required this.borderWidth,
-  });
+@freezed
+abstract class SleekButtonThemeData with _$SleekButtonThemeData {
+  const factory SleekButtonThemeData({
+    @required double padding,
+    @required TextStyle textStyle,
+    @required double cornerRadius,
+    @required IconThemeData iconTheme,
+    @required Color fill,
+    @required double borderWidth,
+  }) = _SleekButtonThemeData;
 
   factory SleekButtonThemeData.fromTheme(ThemeData theme) {
     final textStyle = theme.textTheme.button;
@@ -26,7 +24,7 @@ class SleekButtonThemeData {
         );
     if (iconTheme.size == null) {
       iconTheme = iconTheme.copyWith(
-        size: textStyle.fontSize * 1.5,
+        size: textStyle.fontSize * 1.2,
       );
     }
 

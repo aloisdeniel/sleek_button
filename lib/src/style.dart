@@ -1,24 +1,25 @@
 import 'package:flutter/widgets.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:sleek_button/src/state.dart';
 import 'package:derived_colors/derived_colors.dart';
 import 'package:sleek_button/src/theme.dart';
+import 'package:flutter/foundation.dart';
 
-class SleekButtonStyle {
-  final Duration transitionDuration;
-  final SleekButtonState<double> opacity;
-  final SleekButtonState<BoxDecoration> decoration;
-  final SleekButtonState<EdgeInsets> padding;
-  final SleekButtonState<TextStyle> textStyle;
-  final SleekButtonState<IconThemeData> iconTheme;
+part 'style.freezed.dart';
 
-  const SleekButtonStyle({
-    this.transitionDuration = const Duration(milliseconds: 120),
-    @required this.opacity,
-    @required this.decoration,
-    @required this.padding,
-    @required this.textStyle,
-    @required this.iconTheme,
-  });
+@freezed
+abstract class SleekButtonStyle with _$SleekButtonStyle {
+  static const defaultTransitionDuration = const Duration(milliseconds: 80);
+
+  const factory SleekButtonStyle({
+    @Default(SleekButtonStyle.defaultTransitionDuration)
+        Duration transitionDuration,
+    @required SleekButtonState<double> opacity,
+    @required SleekButtonState<BoxDecoration> decoration,
+    @required SleekButtonState<EdgeInsets> padding,
+    @required SleekButtonState<TextStyle> textStyle,
+    @required SleekButtonState<IconThemeData> iconTheme,
+  }) = _SleekButtonStyle;
 
   factory SleekButtonStyle.flat({
     Color color,
