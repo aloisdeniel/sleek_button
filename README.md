@@ -1,4 +1,4 @@
-<img src="sleek_button_logo.png" width="100%">
+<img src="https://github.com/aloisdeniel/sleek_button/raw/master/sleek_button_logo.png" width="100%">
 
 <p>
   <a href="https://pub.dartlang.org/packages/sleek_button"><img src="https://img.shields.io/pub/v/sleek_button.svg"></a>
@@ -9,7 +9,7 @@
 
 A simple but yet customizable button.
 
-<img height="184" src="images/examples.png">
+<img height="184" src="https://github.com/aloisdeniel/sleek_button/raw/master/images/examples.png">
 
 ## Install
 
@@ -42,7 +42,7 @@ SleekButton(
 
 ### Widget
 
-<img height="71" src="images/widget.png">
+<img height="71" src="https://github.com/aloisdeniel/sleek_button/raw/master/images/widget.png">
 
 ```dart
 SleekButton(
@@ -87,7 +87,7 @@ SleekButton(
 
 #### Flat
 
-<img height="132" src="images/style_flat.png">
+<img height="132" src="https://github.com/aloisdeniel/sleek_button/raw/master/images/style_flat.png">
 
 ```dart
 SleekButtonStyle.flat(
@@ -126,7 +126,7 @@ SleekButtonStyle.flat(
 
 #### Outlined
 
-<img height="132" src="images/style_outlined.png">
+<img height="132" src="https://github.com/aloisdeniel/sleek_button/raw/master/images/style_outlined.png">
 
 ```dart
 SleekButtonStyle.outlined(
@@ -165,7 +165,7 @@ SleekButtonStyle.outlined(
 
 #### Light
 
-<img height="77" src="images/style_light.png">
+<img height="77" src="https://github.com/aloisdeniel/sleek_button/raw/master/images/style_light.png">
 
 ```dart
 SleekButtonStyle.light(
