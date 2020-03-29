@@ -161,7 +161,7 @@ packages:
       name: derived_colors
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.2.2"
+    version: "0.2.4"
   fixnum:
     dependency: transitive
     description:
@@ -456,7 +456,7 @@ packages:
       name: test_api
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.2.11"
+    version: "0.2.15"
   timing:
     dependency: transitive
     description:

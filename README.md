@@ -25,7 +25,7 @@ dependencies:
 ```dart
 SleekButton(
     onTap: () {
-        print('tapped!')
+        print('tapped!');
     },
     style: SleekButtonStyle.flat(
         color: swatch.primary,

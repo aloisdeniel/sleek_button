@@ -59,7 +59,7 @@ abstract class SleekButtonStyle with _$SleekButtonStyle {
       ),
       decoration: SleekButtonState(
         enabled: decoration.copyWith(color: backgroundColor),
-        hover: decoration.copyWith(color: backgroundColor.subtle(0.3)),
+        hover: decoration.copyWith(color: backgroundColor.subtle(0.03)),
         active: decoration.copyWith(color: backgroundColor.subtle()),
       ),
       textStyle: SleekButtonState(
@@ -185,7 +185,7 @@ abstract class SleekButtonStyle with _$SleekButtonStyle {
       ),
       decoration: SleekButtonState(
         enabled: decoration.copyWith(color: backgroundColor),
-        hover: decoration.copyWith(color: backgroundColor.subtle(0.3)),
+        hover: decoration.copyWith(color: backgroundColor.subtle(0.03)),
         active: decoration.copyWith(color: backgroundColor.subtle()),
       ),
       textStyle: SleekButtonState(

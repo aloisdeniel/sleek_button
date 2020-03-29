@@ -1,6 +1,6 @@
 name: sleek_button
 description: A simple but yet customizable button.
-version: 0.1.0
+version: 0.1.1
 homepage: https://github.com/aloisdeniel/sleek_button
 
 environment:
@@ -9,7 +9,7 @@ environment:
 dependencies:
   freezed_annotation: ^0.7.1
   provider: ^4.0.4
-  derived_colors: ^0.2.2 
+  derived_colors: ^0.2.3
   flutter:
     sdk: flutter
 
